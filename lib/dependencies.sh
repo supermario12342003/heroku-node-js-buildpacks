@@ -1,5 +1,5 @@
 list_dependencies() {
-  local build_dir="$1/client"
+  local build_dir=$1/client
 
   cd "$build_dir"
   if $YARN; then
@@ -34,7 +34,7 @@ yarn_node_modules() {
 }
 
 npm_node_modules() {
-  local build_dir=${1:-}
+  local build_dir=$1/client
 
   if [ -e $build_dir/package.json ]; then
     cd $build_dir
@@ -51,7 +51,7 @@ npm_node_modules() {
 }
 
 npm_rebuild() {
-  local build_dir=${1:-}
+  local build_dir=$1/client
 
   if [ -e $build_dir/package.json ]; then
     cd $build_dir
