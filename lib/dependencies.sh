@@ -34,7 +34,7 @@ yarn_node_modules() {
 }
 
 npm_node_modules() {
-  local build_dir=$1/client
+  local build_dir="$1/client"
 
   if [ -e $build_dir/package.json ]; then
     cd $build_dir
