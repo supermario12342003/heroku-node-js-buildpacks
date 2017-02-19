@@ -1,5 +1,5 @@
 list_dependencies() {
-  local build_dir="$1"
+  local build_dir="$1/client"
 
   cd "$build_dir"
   if $YARN; then
